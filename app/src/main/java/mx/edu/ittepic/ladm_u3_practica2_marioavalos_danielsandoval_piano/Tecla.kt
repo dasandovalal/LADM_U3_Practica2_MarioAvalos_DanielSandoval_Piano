@@ -6,27 +6,27 @@ import android.graphics.Paint
 
 class Tecla(lienzo: Lienzo, txtTecla:String, teclaColor:Int, sonido:Int,
     left:Float, top:Float, right:Float, bottom:Float) {
-    val lienzo = lienzo
-    val txtTecla = txtTecla
+    val LIENZO = lienzo
+    val TXT_TECLA = txtTecla
     var teclaColor = teclaColor
-    val sonido = sonido
-    val left = left
-    val top = top
-    val right = right
-    val bottom = bottom
+    val SONIDO = sonido
+    val LEFT = left
+    val TOP = top
+    val RIGHT = right
+    val BOTTOM = bottom
 
-    val p = Paint()
+    val P = Paint()
 
     fun pintar(c:Canvas){
-        p.color = teclaColor
-        c.drawRect(left,top,right,bottom,p)
-        p.color = Color.RED
+        P.color = teclaColor
+        c.drawRect(LEFT,TOP,RIGHT,BOTTOM,P)
+        P.color = Color.RED
         if(teclaColor==Color.WHITE) {
-            p.textSize = 60f
-            c.drawText(txtTecla,left+104f,bottom-60f,p)
+            P.textSize = 60f
+            c.drawText(TXT_TECLA,LEFT+104f,BOTTOM-60f,P)
         }else if (teclaColor==Color.BLACK){
-            p.textSize = 50f
-            c.drawText(txtTecla,left+57f,bottom-70f,p)
+            P.textSize = 50f
+            c.drawText(TXT_TECLA,LEFT+57f,BOTTOM-70f,P)
         }
     }
 
