@@ -27,6 +27,13 @@ class Lienzo(activity: Activity):View(activity) {
         p.textSize = 60f
         c.drawText("DO",110f,950f,p) //TEXTO
 
+        //DO#
+        p.color = Color.BLACK
+        c.drawRect(140f,6f,233f,720f,p) //TECLA
+        p.color = Color.RED
+        p.textSize = 50f
+        c.drawText("DO#",186f,650f,p) //TEXTO
+
         //RE
         p.color = Color.WHITE
         c.drawRect(289f,6f,569f,1010f,p) //TECLA
