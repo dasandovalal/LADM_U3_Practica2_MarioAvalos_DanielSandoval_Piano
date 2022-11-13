@@ -79,14 +79,23 @@ class Lienzo(activity: Activity):View(activity) {
                 if (DO_S.tocoTecla(event.x,event.y)) {
                     DO_S.reproducirSonido(activity)
                 }
+                if (RE_S.tocoTecla(event.x,event.y)) {
+                    RE_S.reproducirSonido(activity)
+                }
+                if (FA_S.tocoTecla(event.x,event.y)) {
+                    FA_S.reproducirSonido(activity)
+                }
+                if (SOL_S.tocoTecla(event.x,event.y)) {
+                    SOL_S.reproducirSonido(activity)
+                }
+                if (LA_S.tocoTecla(event.x,event.y)) {
+                    LA_S.reproducirSonido(activity)
+                }
                 if (DO.tocoTecla(event.x,event.y)) {
                     DO.reproducirSonido(activity)
                 }
                 if (RE.tocoTecla(event.x,event.y)) {
                     RE.reproducirSonido(activity)
-                }
-                if (RE_S.tocoTecla(event.x,event.y)) {
-                    RE_S.reproducirSonido(activity)
                 }
                 if (MI.tocoTecla(event.x,event.y)) {
                     MI.reproducirSonido(activity)
@@ -94,20 +103,11 @@ class Lienzo(activity: Activity):View(activity) {
                 if (FA.tocoTecla(event.x,event.y)) {
                     FA.reproducirSonido(activity)
                 }
-                if (FA_S.tocoTecla(event.x,event.y)) {
-                    FA_S.reproducirSonido(activity)
-                }
                 if (SOL.tocoTecla(event.x,event.y)) {
                     SOL.reproducirSonido(activity)
                 }
-                if (SOL_S.tocoTecla(event.x,event.y)) {
-                    SOL_S.reproducirSonido(activity)
-                }
                 if (LA.tocoTecla(event.x,event.y)) {
                     LA.reproducirSonido(activity)
-                }
-                if (LA_S.tocoTecla(event.x,event.y)) {
-                    LA_S.reproducirSonido(activity)
                 }
                 if (SI.tocoTecla(event.x,event.y)) {
                     SI.reproducirSonido(activity)
