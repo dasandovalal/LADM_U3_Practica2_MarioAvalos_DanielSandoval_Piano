@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#00BCD4"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -31,8 +31,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEstrellita"
-        android:text="ESTRELLITA"
+        android:id="@+id/btnCorderito"
+        android:text="CORDERITO"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:textSize="30sp"
@@ -40,8 +40,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMartinillo"
-        android:text="MARTINILLO"
+        android:id="@+id/btnEstrellita"
+        android:text="ESTRELLITA"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:textSize="30sp"
