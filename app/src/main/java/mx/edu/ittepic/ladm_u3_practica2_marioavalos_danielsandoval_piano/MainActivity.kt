@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,12 +37,21 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /*fun setCancionTerminada(){
+        cancionTerminada = true
+    }
+
     override fun onRestart() {
         super.onRestart()
-        AlertDialog.Builder(this)
-            .setTitle("¡FELICIDADES!")
-            .setMessage("¡COMPLETASTE LA CANCION!")
-            .setPositiveButton("CERRAR"){d,i->}
-            .show()
+        if (cancionTerminada) {
+            AlertDialog.Builder(this)
+                .setTitle("¡FELICIDADES!")
+                .setMessage("¡COMPLETASTE LA CANCION!")
+                .setPositiveButton("CERRAR") { d, i -> }
+                .show()
+        }
+        cancionTerminada=false
     }
+
+     */
 }

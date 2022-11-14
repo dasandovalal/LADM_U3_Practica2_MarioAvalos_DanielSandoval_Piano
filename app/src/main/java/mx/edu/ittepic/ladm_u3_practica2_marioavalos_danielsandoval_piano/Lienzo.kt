@@ -42,6 +42,8 @@ class Lienzo(activity: Activity):View(activity) {
         }
     }
 
+    var p = Paint()
+
     override fun onDraw(c: Canvas) {
         super.onDraw(c)
 
@@ -63,6 +65,12 @@ class Lienzo(activity: Activity):View(activity) {
         FA_S.pintar(c)
         SOL_S.pintar(c)
         LA_S.pintar(c)
+
+        p.color = Color.RED
+        c.drawRect(15f,15f,70f,70f,p)
+        p.color = Color.BLACK
+        p.textSize = 55f
+        c.drawText("X",25f,65f,p)
 
         /*//RE
         p.color = Color.WHITE
@@ -86,11 +94,18 @@ class Lienzo(activity: Activity):View(activity) {
 
     }
 
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
 
         when(event.action){
             MotionEvent.ACTION_DOWN->{
                 //Saber qué tecla se presionó y sonar
+                if (event.x>=15f && event.x<=70f){
+                    if (event.y>=15f && event.y<=70f){
+                        activity.finish()
+                    }
+                }//Cerrar piano
+
                 if (DO_S.tocoTecla(event.x,event.y)) {
                     teclaTocada = DO_S
                     DO_S.reproducirSonido(activity)
@@ -164,6 +179,14 @@ class Lienzo(activity: Activity):View(activity) {
         teclaTocada = null
     }
 
+    fun aplausos(){
+        var aplausos = MediaPlayer.create(activity,R.raw.aplausos)
+        aplausos.seekTo(0)
+        aplausos.start()
+        Thread.sleep(6000)
+        aplausos.stop()
+    }
+
     fun corderito() = GlobalScope.launch {
         //Cancion de MARIA TENIA UN CORDERITO
         var cancionTerminada = false
@@ -200,6 +223,7 @@ class Lienzo(activity: Activity):View(activity) {
             juegaTecla(DO)
             cancionTerminada = true
         }
+        aplausos()
         activity.finish()
     }
 
@@ -257,6 +281,7 @@ class Lienzo(activity: Activity):View(activity) {
             juegaTecla(RE)
             cancionTerminada = true
         }
+        aplausos()
         activity.finish()
     }
 }
