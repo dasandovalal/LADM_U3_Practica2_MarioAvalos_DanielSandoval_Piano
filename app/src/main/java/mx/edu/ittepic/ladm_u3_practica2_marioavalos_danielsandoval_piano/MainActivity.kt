@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         var piano = Intent(this,MainActivity2::class.java)
 
+        AlertDialog.Builder(this)
+            .setTitle("Version BETA")
+            .setMessage("A veces el audio se deja de esuchar :(\nFavor de reiniciar en ese caso")
+            .setPositiveButton("CERRAR"){d,i->}
+            .show()
+
         btnJuegoLibre.setOnClickListener {
 
             piano.putExtra("CANCION", "")

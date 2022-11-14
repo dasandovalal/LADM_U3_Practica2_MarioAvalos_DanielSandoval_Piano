@@ -185,6 +185,7 @@ class Lienzo(activity: Activity):View(activity) {
         aplausos.start()
         Thread.sleep(6000)
         aplausos.stop()
+        aplausos.release()
     }
 
     fun corderito() = GlobalScope.launch {

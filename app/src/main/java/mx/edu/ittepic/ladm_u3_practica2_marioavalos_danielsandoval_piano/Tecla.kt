@@ -44,9 +44,12 @@ class Tecla(lienzo: Lienzo, txtTecla:String, teclaColor:Int, sonido:Int,
     }
 
     fun reproducirSonido(activity: Activity){
-        var sonido = MediaPlayer.create(activity,SONIDO)
+        var sonido = MediaPlayer.create(activity, SONIDO)
         sonido.seekTo(0)
         sonido.start()
+        if (sonido.currentPosition==sonido.duration){
+            sonido.release()
+        }//NO FUNCIONA
 
     }
 
